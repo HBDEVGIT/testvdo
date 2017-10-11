@@ -43,9 +43,14 @@ app.get('/', function(req, res){
 });
 
 
-http.listen(8080, function(){
-    console.log('listening at port *:8080 ');	
+var port = process.env.PORT || 8080 ;
+http.listen(port, function() {
+    console.log("App is running on port " + port);
 });
+
+// http.listen(8080, function(){
+//     console.log('listening at port *:8080 ');	
+// });
 
 io.on('connection', function(socket){
     //console.log(socket.client.conn.request);
