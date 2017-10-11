@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">                                                        
+		<meta name="format-detection" content="telephone=no">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+		<title>HBCHAT</title>
+		<link rel="shortcut icon" href="www/images/favicon.ico">
+		<link href="www/css/bootstrap.min.css" rel="stylesheet">
+		<link href="www/css/real-world.css" rel="stylesheet">
+		<link href="www/css/style.css" rel="stylesheet">
+		<script  src="www/js/socket.io-1.2.0.js"></script>
+		<script  src="www/js/jquery-1.11.1.js"></script>
+		<script  src="www/js/socket.io-stream.js"></script>
+		<script  src="www/js/jquery.dateFormat.js"></script>
+		<script  src="www/js/app.js"></script>
+	</head>
+	<body onload="handleBodyLoad()">
+		<div class="login-overlay">
+			<div class="login-box">
+				<div class="login-input-cnt">
+					<input id="userName" class="user" placeholder="Enter User Name to start">
+				</div>
+				<div class="login-message-cnt">
+					<span>&nbsp;</span>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="logged-user-main-cnt" id="logged_user_main_cnt">&nbsp;</div>
+			<div class="col-md-3 col-sm-3">
+				<div class="row">
+					<div class="whatsapp-list">
+						<div class="contat-search clearfix">
+							<button class="search-icon">&nbsp;</button>
+							<input type="search" placeholder="Search or start new chat">
+						</div>
+						<div class="contact-list clearfix" id="user_list"><ul></ul></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-9 col-sm-9" id="right_chat_area" style="display:none;">
+				<div class="row"> 
+					<div class="whatsapp-chat">
+						<div class="notified-msg top-box clearfix">
+							<div class="user-photo new"><span><img src="www/images/hiddenbrains-logo.png" alt=""></span><em id="current_target_user_text_cnt">&nbsp;</em></div>
+							<div class="user-name new">
+								<div class="chat-box">
+									<input type="file" name="file" id="file" >
+									<div class="clip-icon" id="add_attachment_button">&nbsp;</div>
+									<div class="menu-dot">&nbsp;</div>
+								</div>
+							</div>
+						</div>
+						<div class="chat-content" id="main_chat_cnt"></div>
+						<div id="progressBar"><div><span></span></div></div>
+						<div id="user_typing_main_cnt" class="user-typing-main-cnt" style="display:none;">
+							<span class="write-user">User</span>
+							<span> is typing </span>
+							<span class="write-dots">........</span>
+							<span class="write-symbol">&#x270E;</span>
+						</div>
+						<div class="emoticon-cnt" id="emoticon_cnt" style="display:none;">
+							<ul>
+								<li><span>&#128512;</span></li>
+								<li><span>&#128513;</span></li>
+								<li><span>&#128514;</span></li>
+								<li><span>&#128515;</span></li>
+								<li><span>&#128516;</span></li>
+								<li><span>&#128517;</span></li>
+								<li><span>&#128518;</span></li>
+								<li><span>&#128519;</span></li>
+								<li><span>&#128520;</span></li>
+								<li><span>&#128521;</span></li>
+								
+								<li><span>&#128522;</span></li>
+								<li><span>&#128523;</span></li>
+								<li><span>&#128524;</span></li>
+								<li><span>&#128525;</span></li>
+								<li><span>&#128526;</span></li>
+								<li><span>&#128527;</span></li>
+								<li><span>&#128528;</span></li>
+								<li><span>&#128529;</span></li>
+								<li><span>&#128530;</span></li>
+								<li><span>&#128531;</span></li>
+						   </ul>
+						</div>
+						<div class="chat-type-box clearfix">
+							<div class="chat-symbol" id="chat_symbol">&nbsp;</div>
+							<div class="chat-area"><textarea id="msg" name="" cols="" rows="" placeholder="Chat here..."></textarea></div>
+							<div class="google-ico">&nbsp;</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
